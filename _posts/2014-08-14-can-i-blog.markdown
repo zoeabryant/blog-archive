@@ -1,0 +1,31 @@
+---
+layout: post
+title:  "Can I blog?"
+date:   2014-08-14 16:29:26
+tags:
+- jekyll
+---
+### Objectives
+* To advance my knowledge of technology and code
+* To record problems and solutions I've faced in the hope that it will help myself, and possibly others
+* To encourage myself to code awesome things that I will want to share
+* To potentially build up a portfolio, or cv fodder (yay!)
+
+### Implementation
+I decided to make this blog, and in the process have adjusted to Jekyll for the first time.
+
+Also getting the hang of spelling Jekyll right the first time.
+
+### Resources
+[Jekyll rb docs](http://jekyllrb.com/)
+
+[Using Jekyll with Github pages](https://help.github.com/articles/using-jekyll-with-pages)
+
+[Markdown Cheatsheet of choice](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+[Then Gruber's Markdown syntax when I realised Jekyll doesn't do pure markdown](http://daringfireball.net/projects/markdown/syntax)
+
+[Tags in Jekyll](http://charliepark.org/tags-in-jekyll)
+
+### Conclusion
+Erm, I'll get back to you on that one.
