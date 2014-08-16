@@ -1,8 +1,8 @@
 # Site settings
-title: Let me try this thing
+title: Zoe Bryant
 email: zoeabryant@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
- Just trying to make cool stuff with code.
+ One of my Makers Academy coaches told me that the most difficult questions to answer are the ones that start with: 'Can I make this?'. I like to ask a lot of those questions.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: http://localhost:4000/ # the base hostname & protocol for your site
 twitter_username: zoeabryant
