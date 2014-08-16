@@ -15,9 +15,34 @@ An [Arduino][ardof] is a **microcontroller**. It can be used to respond to its s
 
 ## Project: Making a row of LEDS blink
 'Hello World' is a computer programming cliche. Making an LED blink seems to be the physical substitute.
+
+### You will need:
+* Arduino (I have an UNO one)
+* Breadboard
+* USB A-B Cable to connect the arduino to the computer
+* LEDs
+* Cables. 2 per LED, and 1 extra (I have 21 wires for 10 lights)
+* [Arduino IDE Software][software]
+
+### Steps
+* Longest wire goes at the top of the negative column on the edge of the breadboard
+* Put the LEDs in. Put them in the middle row, so there is space in the columns behind and infront of them. Longest leg faces away from the wire at the top of the negative col.
+* Behind each of the shorter legs, the negative legs, put a wire in the next slot in the same row.
+* These wires plug into the negative column, in any row as long as they are in the negative col.
+* The rest of the wires are for the positive legs.
+* Arduino in!
+* Long Negative wire to GND (ground)
+* USB plug in
+
+* Tools: Board: Arduino UNO
+* Tools: Serial Port: /dev/tty.usbmodem1421
+* ^^ why this setting?
+* Write code
+* Verify, Upload
+
+
 ![Tech Will Save Us's arduino cheatsheet]({{ site.url }}/assets/post_img/2014-08/16-arduinocheatsheet.jpg)
 [Tech Will Save Us Arduino Cheatsheet][cheatsheet]
-
 
 
 [startkit]: http://www.techwillsaveus.com/shop/diy-kits/start-arduino/
@@ -26,3 +51,4 @@ An [Arduino][ardof] is a **microcontroller**. It can be used to respond to its s
 [roi]: https://twitter.com/roiDsign
 [projects]: http://playground.arduino.cc/projects/ideas
 [cheatsheet]: http://techwillsaveus.com/az/wp-content/uploads/2014/02/cheat-sheet-3.pdf
+[software]: http://arduino.cc/en/main/software
