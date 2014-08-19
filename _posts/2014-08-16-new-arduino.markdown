@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Can I play with my Arduino now?"
-date:   2014-08-16 12:43:54
+date:   2014-08-19 14:04:01
 tags:
 - arduino
 - how to
