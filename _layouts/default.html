@@ -17,4 +17,21 @@
 
   </body>
 
+  <script src="{{ "/js/tweet-highlighted/jquery-1.10.2.min.js" | prepend: site.baseurl }}"></script>
+
+  <script src="{{ "/js/tweet-highlighted/jquery.tweetHighlighted.js" | prepend: site.baseurl }}"></script>
+
+  <script type="text/javascript">
+
+    $('body').tweetHighlighted({
+     node: '<a href="#"><img src="/assets/site_components/tweet.png" width="90px" height="30px" alt="Tweet this text"></a>',
+     minLength: 6,
+     maxLength: 144 * 2,
+     extra: window.location.href,
+     via: 'zoeabryant',
+     popupArgs: 'width=600,height=600,toolbar=0,location=0'
+  });
+
+  </script>
+
 </html>
