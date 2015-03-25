@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Can I play with my Arduino now?"
+title:  "Starting with an Arduino"
 date:   2014-08-19 14:04:01
 tags:
 - arduino

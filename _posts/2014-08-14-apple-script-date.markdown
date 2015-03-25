@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Can I create a keyboard shortcut to write the current date and time?"
+title:  "Creating a keyboard shortcut to write the current date and time"
 date:   2014-08-14 18:10:12
 tags:
 - apple mac

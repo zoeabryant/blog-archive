@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Can I blog?"
+title:  "Starting a blog"
 date:   2014-08-14 16:29:26
 tags:
 - jekyll

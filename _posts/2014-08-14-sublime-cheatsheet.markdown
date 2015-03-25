@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Can I do a talk on Sublime Text keyboard shortcuts?"
+title:  "Talk on Sublime Text keyboard shortcuts"
 date:   2014-08-14 22:09:32
 tags:
 - sublime text
