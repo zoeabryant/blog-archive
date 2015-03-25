@@ -1,0 +1,107 @@
+---
+layout: post
+title:  "Running WordPress locally"
+date:   2015-03-25 16:45:03
+tags:
+- how to
+---
+
+So, due to reasons to do with my new job which I won't go into, I found myself writing a WordPress Plugin. Not ideal considering I thought I left WordPress when I left uni, and PHP when I left my first job. Plus, it involved writing bad code. Really bad code. Sorry, Makers.
+
+I'm not going to go into how I wrote the plugin here, [there are plenty of better tutorials for it][tutsplus]. This is simply recording how I set up WordPress on my local machine for future reference. Any feedback is welcome!
+
+### Running wordpress locally on my machine
+I've installed and reinstalled [WAMP][wamp] and [MAMP][mamp] plenty of times. Breaking the setup and having to reinstall it cost me hours in my first job, but I'd still reccommend wamp/mamp/lamp if you are planning to use WordPress regularly. Plus, breaking things is learning and all that. This time, I wanted a **lightweight solution** that I could run from my command line.
+
+### Running a PHP server
+Thankfully, [OS X Mavericks now includes a built in PHP webserver][server_tut] which means I can run a PHP server with one command:
+
+```
+php -S localhost:8000
+```
+
+...provided PHP is already installed. [I installed PHP through Homebrew][php_brew].
+
+[Homebrew][homebrew] is 'The missing package manager for OS X', and has been very useful for me so far.
+
+```
+brew install php54
+```
+
+
+### Databases with MySQL
+Install MySQL with homebrew: 
+
+```
+brew install mysql 
+```
+
+Setting up the database to work with WordPress locally is another thing that nearly always goes wrong. Thankfully [this article][server_tut] walked me through creating a MySQL database and giving permission for WordPress to use it:
+
+Create database 'wpdb' : 
+```
+mysqladmin -u root create wpdb
+```
+
+Login to MySQL with user 'root' (that's me!) : 
+```
+mysql -u root
+```
+
+Give permission to username 'wp' @ localhost with the password 'password' to access 'wpdb' within the 'mysql>' setup and quit:
+
+```
+mysql> grant all on wpdb.* to wp@localhost identified by 'password';
+mysql> \q
+```
+
+Honestly, [this article][server_tut] saved me a lot of bother.
+
+### WordPress itself
+I did look into [WordPress Command Line Interface][wp-cli] but I personally felt like it wasn't much quicker for setting up. It does have extra functionality for wordpress management that may appeal to others.
+
+Download all the files you need from the [offical WP site][wp_main] and navigate to the folder.
+
+Start the mysql server:
+```
+mysql.server start
+```
+
+Start the PHP server:
+```
+php -S localhost:8000
+```
+
+Head to 
+```
+localhost:8000
+```and go through the 5 minute install.
+
+You'll probably see the 'no database connection' error a handful of times. Make sure that your database user details are correct, that you made the database, and that the mysql server is running no issue.
+
+
+## That's it.
+Your own WordPress setup, for hacking away themes and plugins to your heart's content.
+
+## Resources
+I've referenced [this article][server_tut] heavily. Thank you, [Matthew Nuzum of Bearfruit](https://www.bearfruit.org/author/bearfruit/).
+
+[Wamp][wamp], [Mamp][mamp] are programmes that set up a virtual server with Apache MySQL PHP for development. Both come with UIs which you will might prefer to the command line. [WP-Cli][wp-cli] for those happiest with command line.
+
+Instructions for [downloading PHP via homebrew][php_brew] and downloading [homebrew][homebrew].
+
+For plugin development, I constantly found myself in this [section of tutsplus][tutsplus].
+
+For theme development, I reccommend ['Bones' starter Template](http://themble.com/bones/). It anticipates the functionality you need and gives a good base for developers.
+
+
+[wamp]: http://www.wampserver.com/en/
+[mamp]: https://www.mamp.info/en/
+
+[server_tut]: https://www.bearfruit.org/2013/11/26/goodbye-mamp-os-x-mavericks-includes-a-built-in-php-webserver/
+
+[php_brew]: https://github.com/Homebrew/homebrew-php
+[homebrew]: http://brew.sh/
+[wp_main]: https://wordpress.org/
+[tutsplus]: http://code.tutsplus.com/categories/wordpress
+[wp-cli]: http://wp-cli.org/
